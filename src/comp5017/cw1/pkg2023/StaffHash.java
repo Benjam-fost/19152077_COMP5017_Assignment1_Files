@@ -62,23 +62,27 @@ public class StaffHash implements IStaffDB{
     /**
      * Determines if the database is empty or not.
      * @pre true
-     * @return true iff the database is empty
+     * @return true if the database is empty
      */
     @Override
     public boolean isEmpty() { return size() == 0; }
 
-    int hash(String name) { // fairly bad; ok for now
-        int val = name.charAt(0);
-        return val % tableSize;
+    private int hash(String name) { // using weighting
+        int val = 0;
+        for (int i = 0; i != name.length(); i++) {
+            val = (i * val + (int)name.charAt(i)) % tableSize;
+        }
+        return val;
     }
     // return first empty bucket or bucket with this name
     int findPos(String name) {
-        int i = hash(name);
-        while (table[i] != null && ! name.equals(table[i].getName())) {
-            // linear probing CHANGE LATER
-            i = (i + 1) % tableSize;
+        assert name != null && !name.isBlank();
+        int index = hash(name), i = 1;
+        while (table[index] != null && ! name.equals(table[index].getName())) {
+            index = (index + (int)Math.pow(i, 2)) % tableSize;
+            i++;
         }
-        //  table[i] == null || name.equals(table[i])
+        assert table[i] == null || name.equals(table[i].getName());
         return i;
     }
     /**
@@ -120,6 +124,7 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public Employee remove(String name){
+        assert name != null && !name.isBlank();
         int i = findPos(name);
         //???
         live[i] = false;

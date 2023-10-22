@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Interfaces Implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/COMP5017CW12023.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/COMP5017CW12023.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/IEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IStaffDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/IStaffDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StaffDBTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffDBTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +72,17 @@
       <updated>1697827921695</updated>
       <workItem from="1697827922803" duration="802000" />
       <workItem from="1697830671740" duration="1753000" />
-      <workItem from="1697934701602" duration="1200000" />
+      <workItem from="1697934701602" duration="4344000" />
     </task>
+    <task id="LOCAL-00001" summary="Interfaces Implemented.">
+      <option name="closed" value="true" />
+      <created>1697935977407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697935977407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Interfaces Implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces Implemented." />
   </component>
 </project>
