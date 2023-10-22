@@ -41,12 +41,14 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public Employee get(String name){
-        // assert statements here
-        Employee returned;
+        assert name != null && !name.isBlank();
+        Employee returned = null;
         int i = findPos(name);
         // table[i] == null || name.equals(table[i])
-        if (table[i] == null) returned = null;
-        else  returned = table[i];
+        if (live[i] && table[i] != null) {
+            returned = table[i];
+        }
+
         return returned;
     }
 
@@ -66,7 +68,9 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public boolean isEmpty() { return size() == 0; }
-
+    private double getLoadFactor() {
+        return (double)numEntries/(double)tableSize;
+    }
     private int hash(String name) { // using weighting
         int val = 0;
         for (int i = 0; i != name.length(); i++) {
@@ -75,7 +79,7 @@ public class StaffHash implements IStaffDB{
         return val;
     }
     // return first empty bucket or bucket with this name
-    int findPos(String name) {
+    private int findPos(String name) {
         assert name != null && !name.isBlank();
         int index = hash(name), i = 1;
         while (table[index] != null && ! name.equals(table[index].getName())) {
@@ -123,12 +127,13 @@ public class StaffHash implements IStaffDB{
      * the name does not exist.
      */
     @Override
-    public Employee remove(String name){
+    public Employee remove(String name) {
         assert name != null && !name.isBlank();
+        Employee removed;
         int i = findPos(name);
-        //???
         live[i] = false;
-        return null; // not really;  replace with sensible value; see comment above
+        removed = table[i];
+        return removed;
     }
 
     /**
