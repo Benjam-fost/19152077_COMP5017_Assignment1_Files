@@ -1,17 +1,15 @@
-package comp5017.cw1.pkg2023; // or whatever
+package comp5017.cw1.pkg2023;
 
 /**
  *
- * @author your name here
- * template for use of students by D Lightfoot 2022-09
- * You must create a class that implements the interface IEmployeeDB
- * You will have to make a class Employee to implement IEmployee first
+ * @author Ben Foster
+ * Based off of a template for use of students, provided by D Lightfoot 2022-09
  */
  
 public  class StaffDBTemplate implements  IStaffDB {
     int tableSize = 10;
     int numEntries;
-    Employee table[] ; // declares table
+    Employee[] table ; // declares table
     boolean [] live;
                
    public StaffDBTemplate() {
