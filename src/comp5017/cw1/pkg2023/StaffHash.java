@@ -1,4 +1,6 @@
 package comp5017.cw1.pkg2023;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class StaffHash implements IStaffDB{
     int tableSize = 10;
@@ -6,7 +8,7 @@ public class StaffHash implements IStaffDB{
     Employee[] table ; // declares table
     boolean[] live;
     public StaffHash() {
-        table = new Employee[tableSize]; // instantiates table
+        table = new Employee[tableSize];
         live = new boolean[tableSize];
         System.out.println("Hash table");
         numEntries= 0;
@@ -72,22 +74,31 @@ public class StaffHash implements IStaffDB{
         return (double)numEntries/(double)tableSize;
     }
     private int hash(String name) { // using weighting
-        int val = 0;
+        assert name != null && !name.isBlank();
+        int val = 0, hash = 0;
         for (int i = 0; i != name.length(); i++) {
-            val = (i * val + (int)name.charAt(i)) % tableSize;
+            hash = (i * val + (int)name.charAt(i));
+            val = hash % tableSize;
+
         }
+        assert val >= 0 && val < tableSize;
+        System.out.println("Hash value generated from " + name + ": " + hash);
         return val;
     }
     // return first empty bucket or bucket with this name
     private int findPos(String name) {
         assert name != null && !name.isBlank();
+        ArrayList<Integer> buckets = new ArrayList<>(); // for showing buckets visited in logging
         int index = hash(name), i = 1;
+        buckets.add(index);
         while (table[index] != null && ! name.equals(table[index].getName())) {
             index = (index + (int)Math.pow(i, 2)) % tableSize;
+            buckets.add(index);
             i++;
         }
         assert table[i] == null || name.equals(table[i].getName());
-        return i;
+        System.out.println("Sequence of buckets visited:\n" + buckets);
+        return index;
     }
     /**
      * Inserts an Employee object into the database, with the key of the supplied
@@ -101,12 +112,12 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public Employee put(Employee member){
+        assert member != null;
         String name = member.getName();
         Employee returned;
         int pos = findPos(name);
         //  table[pos] == null || name.equals(table[pos])
         if (table[pos] == null) { // put in new member
-            // something about resizing here
             table[pos] = member;
             numEntries ++;
             returned = null;
@@ -115,7 +126,35 @@ public class StaffHash implements IStaffDB{
             returned  = table[pos];
             table[pos] = member;
         }
+        System.out.println("Size: " + size() + "\nLoad Factor: " + getLoadFactor());
+        assert Objects.equals(member.getName(), table[pos].getName());
+        System.out.println("Employee added with\nName: " + member.getName() + "\nAffiliation: " + member.getAffiliation() + "\n");
+        resize();
         return returned; //fixed!
+    }
+    private void resize() {
+        if (getLoadFactor() > 0.5) {
+            System.out.println("\n***Load factor > 0.5, Table is being resized***\n");
+            int tempSize = tableSize;
+            tableSize *= 2;
+            assert tableSize != tempSize : "Was not deep copied";
+            Employee[] tempTable = new Employee[tempSize];
+            for (int i = 0; i < tempSize; i++) {
+                Employee item = table[i];
+                tempTable[i] = item;
+            }
+            table = new Employee[tableSize];
+            live = new boolean[tableSize];
+            clearDB();
+            System.out.println("\n***Hashing over Employees START***\n{");
+            for (int i = 0; i < tempSize; i++) {
+                Employee item = tempTable[i];
+                if (item != null) {
+                    put(item);
+                }
+            }
+            System.out.println("}\n***Table has been resized to " + tableSize + "***\n");
+        }
     }
 
     /**
@@ -143,13 +182,7 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public void displayDB(){
-        for(int i = 0; i != tableSize; i++) {
-            System.out.print(i + ": ");
-            if (table[i] == null)
-                System.out.println("****");
-            else
-                System.out.println(table[i]);
-        }
+
         // print out all the entries -- show all, unsorted to start with
     }
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Weighted hash and basic quadratic probing implemented.&#10;Fix collisions in findPos() or implement better method.">
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="First successful compile + setup&#10;Must fix the Display function of Main().">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
@@ -23,12 +23,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Benjam-fost"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b6532549-a4fa-45fa-bdbc-b37ddcec4d9a" />
+        <option name="url" value="https://github.com/Benjam-fost/19152077_COMP5017_Assignment1_Files" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2X2X05zlnUZruGLmHjrL2UAolDA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -72,7 +86,8 @@
       <updated>1697827921695</updated>
       <workItem from="1697827922803" duration="802000" />
       <workItem from="1697830671740" duration="1753000" />
-      <workItem from="1697934701602" duration="9149000" />
+      <workItem from="1697934701602" duration="9299000" />
+      <workItem from="1697973201038" duration="21827000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces Implemented.">
       <option name="closed" value="true" />
@@ -90,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697940029003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="get() and remove() implemented.&#10;Used lazy delete via bool live">
+      <option name="closed" value="true" />
+      <created>1697946347396</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697946347396</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +134,34 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Interfaces Implemented." />
     <MESSAGE value="Weighted hash and basic quadratic probing implemented.&#10;Fix collisions in findPos() or implement better method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Weighted hash and basic quadratic probing implemented.&#10;Fix collisions in findPos() or implement better method." />
+    <MESSAGE value="get() and remove() implemented.&#10;Used lazy delete via bool live" />
+    <MESSAGE value="First successful compile + setup&#10;Must fix the Display function of Main()." />
+    <option name="LAST_COMMIT_MESSAGE" value="First successful compile + setup&#10;Must fix the Display function of Main()." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="15" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="getLoadFactor() == 0.6" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((StaffHash)this).numEntries" custom="comp5017.cw1.pkg2023.StaffHash" />
+        <watch expression="((StaffHash)this).table" custom="comp5017.cw1.pkg2023.StaffHash" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
