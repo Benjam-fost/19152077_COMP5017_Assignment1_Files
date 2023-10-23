@@ -19,11 +19,11 @@ public class COMP5017CW12023 {
     private static String readNonEmpty() {
         // read non-null, non-empty string;
         String s = kb.nextLine().trim();
-        while (s == null || s.equals("")) {
+        while (s.isBlank() || s.isEmpty()) {
             System.out.print("must not be blank -- try again: ");
             s = kb.nextLine().trim();
         }
-        assert s != null && !s.trim().equals("");
+        assert s != null && !s.trim().isEmpty();
         return s;
     }
 

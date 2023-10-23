@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="First successful compile + setup&#10;Must complete displayDB().">
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Fixed bug of size increasing when resizing&#10;Added basic display function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffDBTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/COMP5017CW12023.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/COMP5017CW12023.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Benjam-fost"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Benjam-fost&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -65,6 +65,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/COMP5017_Coursework_1/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -89,7 +90,8 @@
       <workItem from="1697827922803" duration="802000" />
       <workItem from="1697830671740" duration="1753000" />
       <workItem from="1697934701602" duration="9299000" />
-      <workItem from="1697973201038" duration="26462000" />
+      <workItem from="1697973201038" duration="29439000" />
+      <workItem from="1698071865257" duration="9316000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces Implemented.">
       <option name="closed" value="true" />
@@ -123,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698020684741</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed findPos()&#10;Can now find indexes that are marked for deletion.&#10;Deleted StaffDBTemplate&#10;Must complete displayDB().">
+      <option name="closed" value="true" />
+      <created>1698025357911</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698025357911</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +157,9 @@
     <MESSAGE value="get() and remove() implemented.&#10;Used lazy delete via bool live" />
     <MESSAGE value="First successful compile + setup&#10;Must fix the Display function of Main()." />
     <MESSAGE value="First successful compile + setup&#10;Must complete displayDB()." />
-    <option name="LAST_COMMIT_MESSAGE" value="First successful compile + setup&#10;Must complete displayDB()." />
+    <MESSAGE value="Fixed findPos()&#10;Can now find indexes that are marked for deletion.&#10;Deleted StaffDBTemplate&#10;Must complete displayDB()." />
+    <MESSAGE value="Fixed bug of size increasing when resizing&#10;Added basic display function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug of size increasing when resizing&#10;Added basic display function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -172,5 +184,9 @@
         <watch expression="((StaffHash)this).table" custom="comp5017.cw1.pkg2023.StaffHash" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
