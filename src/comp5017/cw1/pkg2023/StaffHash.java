@@ -91,12 +91,12 @@ public class StaffHash implements IStaffDB{
         ArrayList<Integer> buckets = new ArrayList<>(); // for showing buckets visited in logging
         int index = hash(name), i = 1;
         buckets.add(index);
-        while (table[index] != null && ! name.equals(table[index].getName())) {
+        while (!((table[index] == null || !live[index]) || name.equals(table[index].getName()))) {
             index = (index + (int)Math.pow(i, 2)) % tableSize;
             buckets.add(index);
             i++;
         }
-        assert table[i] == null || name.equals(table[i].getName());
+        assert table[index] == null || name.equals(table[index].getName());
         System.out.println("Sequence of buckets visited:\n" + buckets);
         return index;
     }
@@ -182,7 +182,13 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public void displayDB(){
-
+        for(int i = 0; i != tableSize; i++) {
+            System.out.print(i + ":\n");
+            if (table[i] == null)
+                System.out.println("****");
+            else
+                System.out.println(table[i]);
+        }
         // print out all the entries -- show all, unsorted to start with
     }
 

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="First successful compile + setup&#10;Must fix the Display function of Main().">
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="First successful compile + setup&#10;Must complete displayDB().">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffDBTemplate.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +72,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="comp5017.cw1.pkg2023.COMP5017CW12023" />
       <module name="COMP5017_Coursework_1" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,7 +89,7 @@
       <workItem from="1697827922803" duration="802000" />
       <workItem from="1697830671740" duration="1753000" />
       <workItem from="1697934701602" duration="9299000" />
-      <workItem from="1697973201038" duration="21827000" />
+      <workItem from="1697973201038" duration="26462000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces Implemented.">
       <option name="closed" value="true" />
@@ -113,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697946347396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First successful compile + setup&#10;Must complete displayDB().">
+      <option name="closed" value="true" />
+      <created>1698020684741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698020684741</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +146,8 @@
     <MESSAGE value="Weighted hash and basic quadratic probing implemented.&#10;Fix collisions in findPos() or implement better method." />
     <MESSAGE value="get() and remove() implemented.&#10;Used lazy delete via bool live" />
     <MESSAGE value="First successful compile + setup&#10;Must fix the Display function of Main()." />
-    <option name="LAST_COMMIT_MESSAGE" value="First successful compile + setup&#10;Must fix the Display function of Main()." />
+    <MESSAGE value="First successful compile + setup&#10;Must complete displayDB()." />
+    <option name="LAST_COMMIT_MESSAGE" value="First successful compile + setup&#10;Must complete displayDB()." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -149,12 +160,10 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="15" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="getLoadFactor() == 0.6" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java</url>
-          <line>135</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.AssertionError" package="java.lang" />
+          <option name="timeStamp" value="19" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
