@@ -76,14 +76,14 @@ public class StaffHash implements IStaffDB{
     }
     private int hash(String name) { // using weighting
         assert name != null && !name.isBlank();
-        int val = 0, hash = 0;
+        int val = 0;
         for (int i = 0; i != name.length(); i++) {
-            hash = (i * val + (int)name.charAt(i));
-            val = hash % tableSize;
+            val = (i * val + (int)name.charAt(i));
+            val = val % tableSize;
 
         }
         assert val >= 0 && val < tableSize;
-        System.out.println("Hash value generated from " + name + ": " + hash);
+        System.out.println("Hash value generated from " + name + ": " + val);
         return val;
     }
     // return first empty bucket or bucket with this name
