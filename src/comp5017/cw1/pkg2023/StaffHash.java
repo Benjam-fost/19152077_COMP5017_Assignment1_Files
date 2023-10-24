@@ -129,6 +129,7 @@ public class StaffHash implements IStaffDB{
         if (table[pos] != null || resizing) { // overwrites
             returned = table[pos];
             table[pos] = member;
+            live[pos] = true;
         }
         else { // Inserts new member at null index
             returned = null;
@@ -203,10 +204,16 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public void displayDB(){
-        int count = 1;
+        int count = 0;
         for (Employee i : table) {
             System.out.println(count + "\n^---------");
-            System.out.println(i + "\n----------\n");
+            if (live[count]) {
+                System.out.println(i);
+            }
+            else {
+                System.out.println("Marked for delete");
+            }
+            System.out.println("----------\n");
             count++;
         }
     }

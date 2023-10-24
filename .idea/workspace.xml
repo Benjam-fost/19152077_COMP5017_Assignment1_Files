@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Fixed bug of size increasing when resizing&#10;Added basic display function">
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Fixed bug in hash()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
@@ -90,7 +90,7 @@
       <workItem from="1697830671740" duration="1753000" />
       <workItem from="1697934701602" duration="9299000" />
       <workItem from="1697973201038" duration="29439000" />
-      <workItem from="1698071865257" duration="17479000" />
+      <workItem from="1698071865257" duration="18860000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces Implemented.">
       <option name="closed" value="true" />
@@ -140,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698082222578</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed bug in hash()">
+      <option name="closed" value="true" />
+      <created>1698113666573</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698113666573</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +174,8 @@
     <MESSAGE value="First successful compile + setup&#10;Must complete displayDB()." />
     <MESSAGE value="Fixed findPos()&#10;Can now find indexes that are marked for deletion.&#10;Deleted StaffDBTemplate&#10;Must complete displayDB()." />
     <MESSAGE value="Fixed bug of size increasing when resizing&#10;Added basic display function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug of size increasing when resizing&#10;Added basic display function" />
+    <MESSAGE value="Fixed bug in hash()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in hash()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
