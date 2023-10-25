@@ -78,9 +78,7 @@ public class StaffHash implements IStaffDB{
         assert name != null && !name.isBlank();
         int val = 0;
         for (int i = 0; i != name.length(); i++) {
-            val = (i * val + (int)name.charAt(i));
-            val = val % tableSize;
-
+            val = (i * val + (int)name.charAt(i)) % tableSize;
         }
         assert val >= 0 && val < tableSize;
         System.out.println("Hash value generated from " + name + ": " + val);
@@ -204,18 +202,41 @@ public class StaffHash implements IStaffDB{
      */
     @Override
     public void displayDB(){
+        Employee[] sortedTable = new Employee[tableSize];
+        System.arraycopy(table, 0, sortedTable, 0, tableSize);
+        sort(sortedTable);
         int count = 0;
-        for (Employee i : table) {
+        for (Employee i : sortedTable) {
             System.out.println(count + "\n^---------");
-            if (live[count]) {
-                System.out.println(i);
-            }
-            else {
-                System.out.println("Marked for delete");
-            }
+            System.out.println(i);
             System.out.println("----------\n");
             count++;
         }
     }
+    public void sort(Employee[] list) {
+        bubbleSort(list);
+    }
+    int getChar(Employee i) {
+        return i.getName().charAt(0);
+    }
 
+    void bubbleSort (Employee[] list) {
+        int size = tableSize-1;
+        Employee temp;
+        for (int i = 0; i < tableSize; i++) { // Deletes marked indexes
+            if (!live[i]) {
+                list[i] = null;
+            }
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size - i; j++) {
+                while (list[j] == null && list[j+1] == null && j < size-i-1) {
+                    j++;
+                }
+                if (list[j] == null || list[j].getName().compareTo(list[j+1].getName()) > 0) {
+                    temp = list[j]; list[j] = list[j+1]; list[j+1] = temp;
+                }
+            }
+        }
+    }
 }

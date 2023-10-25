@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Fixed bug in hash()">
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Fixed bug in put() and displayDB()&#10;Now displays real indexes on display and updates live[pos] on overwrite in put().">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
@@ -51,23 +51,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/COMP5017_Coursework_1/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/Ben9H/IdeaProjects/COMP5017_Coursework_1/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="comp5017.cw1.pkg2023.COMP5017CW12023" />
@@ -90,7 +94,8 @@
       <workItem from="1697830671740" duration="1753000" />
       <workItem from="1697934701602" duration="9299000" />
       <workItem from="1697973201038" duration="29439000" />
-      <workItem from="1698071865257" duration="18860000" />
+      <workItem from="1698071865257" duration="19909000" />
+      <workItem from="1698160856319" duration="20990000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces Implemented.">
       <option name="closed" value="true" />
@@ -148,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698113666573</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed bug in put() and displayDB()&#10;Now displays real indexes on display and updates live[pos] on overwrite in put().">
+      <option name="closed" value="true" />
+      <created>1698115140544</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698115140544</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +188,8 @@
     <MESSAGE value="Fixed findPos()&#10;Can now find indexes that are marked for deletion.&#10;Deleted StaffDBTemplate&#10;Must complete displayDB()." />
     <MESSAGE value="Fixed bug of size increasing when resizing&#10;Added basic display function" />
     <MESSAGE value="Fixed bug in hash()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in hash()" />
+    <MESSAGE value="Fixed bug in put() and displayDB()&#10;Now displays real indexes on display and updates live[pos] on overwrite in put()." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in put() and displayDB()&#10;Now displays real indexes on display and updates live[pos] on overwrite in put()." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -192,8 +206,18 @@
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="19" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java</url>
+          <line>230</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="comp5017.cw1.pkg2023.StaffHash" memberName="table" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((StaffHash)this).numEntries" custom="comp5017.cw1.pkg2023.StaffHash" />
