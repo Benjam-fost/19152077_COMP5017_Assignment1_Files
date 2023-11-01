@@ -1,5 +1,6 @@
 package comp5017.cw1.pkg2023;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class StaffHash implements IStaffDB{
@@ -205,15 +206,26 @@ public class StaffHash implements IStaffDB{
     @Override
     public void displayDB(){
         int count = 0;
-        for (Employee i : table) {
-            System.out.println(count + "\n^---------");
-            if (live[count]) {
-                System.out.println(i);
+        String[] sortedTable = new String[tableSize];
+        for (int i = 0; i < tableSize; i++) {
+            if (live[i] && table[i] != null) {
+                sortedTable[i] = "Name: " + table[i].getName() + "¬Affiliation: " + table[i].getAffiliation();
             }
             else {
-                System.out.println("Marked for delete");
+                sortedTable[i] = "zzzzz";
             }
-            System.out.println("----------\n");
+        }
+        Arrays.sort(sortedTable);
+        for (String item : sortedTable) {
+            System.out.println(count + "\n^---------");
+            if (item.contains("¬")) {
+                String[] employee = item.split("¬");
+                System.out.println(employee[0] + "\n" + employee[1]);
+            }
+            else {
+                System.out.println("Empty");
+            }
+            System.out.println("----------");
             count++;
         }
     }
