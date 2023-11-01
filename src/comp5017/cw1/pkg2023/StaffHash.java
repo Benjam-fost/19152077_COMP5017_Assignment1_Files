@@ -189,12 +189,14 @@ public class StaffHash implements IStaffDB{
     @Override
     public Employee remove(String name) {
         assert name != null && !name.isBlank();
-        Employee removed;
-        int i = findPos(name);
-        live[i] = false;
-        removed = table[i];
-        numEntries--;
-        System.out.println("\n***" + removed.getName() + " deleted with***\n"+ removed);
+        Employee removed = null;
+        if (containsName(name)) {
+            int i = findPos(name);
+            live[i] = false;
+            removed = table[i];
+            numEntries--;
+            System.out.println("\n***" + removed.getName() + " deleted with***\n"+ removed);
+        }
         System.out.println("Size: " + size() + "\nLoad Factor: " + getLoadFactor());
         return removed;
     }
@@ -212,7 +214,7 @@ public class StaffHash implements IStaffDB{
                 sortedTable[i] = "Name: " + table[i].getName() + "¬Affiliation: " + table[i].getAffiliation();
             }
             else {
-                sortedTable[i] = "zzzzz";
+                sortedTable[i] = "zzzzz"; // Used to avoid null for Arrays.sort()
             }
         }
         Arrays.sort(sortedTable);

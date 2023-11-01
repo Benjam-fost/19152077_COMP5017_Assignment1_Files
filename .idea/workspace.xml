@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="Fixed bug in hash()">
+    <list default="true" id="65de44dd-67b0-4741-83dc-d325c2f88383" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/cw1/pkg2023/StaffHash.java" afterDir="false" />
     </list>
@@ -59,6 +59,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/19152077_COMP5017_Assignment1_Files&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -93,7 +94,8 @@
       <workItem from="1698071865257" duration="18860000" />
       <workItem from="1698844816535" duration="94000" />
       <workItem from="1698845585079" duration="93000" />
-      <workItem from="1698845691869" duration="7935000" />
+      <workItem from="1698845691869" duration="8286000" />
+      <workItem from="1698854227511" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces Implemented.">
       <option name="closed" value="true" />
@@ -151,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698113666573</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="CW1 Final&#10;Finished displayDB() with string list Arrays.sort()">
+      <created>1698853840104</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698853840104</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +187,8 @@
     <MESSAGE value="Fixed findPos()&#10;Can now find indexes that are marked for deletion.&#10;Deleted StaffDBTemplate&#10;Must complete displayDB()." />
     <MESSAGE value="Fixed bug of size increasing when resizing&#10;Added basic display function" />
     <MESSAGE value="Fixed bug in hash()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in hash()" />
+    <MESSAGE value="CW1 Final&#10;Finished displayDB() with string list Arrays.sort()" />
+    <option name="LAST_COMMIT_MESSAGE" value="CW1 Final&#10;Finished displayDB() with string list Arrays.sort()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
